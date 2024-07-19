@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://kit.fontawesome.com/ae49c0c380.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="top-bar">
+            <div class="logo">
+                <a href="Index.html"><img src="LOGOROJO-removebg-preview.png" alt="Logo"></a>
+            </div>
+            <div class="search-bar">
+                <input type="search" placeholder="Buscar...">
+                <button type="button">Buscar</button>
+            </div>
+            <div class="icons">
+                <a href="login.html">
+                    <h3><i class="fa-solid fa-user"></i> Iniciar Sesion</h3>
+                </a>
+                <a href="Registro.html">
+                    <h3><i class="fa-solid fa-pen-to-square"></i> Registrate</h3>
+                </a>
+                <a href="carrito.html">
+                    <h3><i class="fa-solid fa-cart-shopping"></i> Carrito</h3>
+                </a>
+            </div>
+        </div>
+        <div class="bottom-bar">
+            <ul>
+                <li><a href="Productos.html"><b>PRODUCTOS</b></a></li>
+                <li><a href="Marcas.html"><b>MARCAS</b></a></li>
+                <li><a href="#"><b>PROMOCIONES</b></a></li>
+                <li><a href="#"><b>NOVEDADES</b></a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <style>
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: url('blue-color-backgrounds-1.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        section {
+            background-color: #ffffff;
+            padding: 80px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 350px;
+            text-align: center;
+        }
+
+        h2 {
+            color: #333;
+            font-size: 35px;
+            letter-spacing: 3px;
+        }
+
+        p {
+            color: #666;
+            font-size: 17px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        label {
+            margin-top: 10px;
+            color: #555;
+            width: 100%;
+            text-align: left;
+            font-size: 15px;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"] {
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            background-color: #283ba7;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+            width: 100%;
+            box-sizing: border-box;
+            font-size: 15px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #357ed1;
+        }
+
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+        
+    </style>
+
+    <div class="container" id="REGISTRO">
+        <section>
+            <h2>Registro</h2>
+            <form id="signupForm">
+                <label>Nombre</label>
+                <input type="text" placeholder="" id="name" required autofocus>
+                <label>Mail</label>
+                <input type="email" placeholder="" id="email" required>
+                <label>Contraseña</label>
+                <input type="password" placeholder="" id="password" required>
+                <input type="submit" value="Registro">
+            </form>
+            <p>¿Ya tienes una cuenta? <a href="login.html#LOG">Login</a></p>
+        </section>
+    </div>
+    <script src="sing.js"></script>
+
+    <div class="divider"><i class="fa-solid fa-info fa-flip"></i>&nbsp;<b> Sobre Nosotros </b></div>
+
+    <article class="info-nosotros">
+        <div class="izq">
+            <table>
+                <tr>
+                    <td>
+                        <h1>Venta de Computadoras, Hardware, Laptops, Monitores & más</h1>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="Der">
+            <table>
+                <tr>
+                    <td>
+                        <p>Gran variedad de productos, disponibilidad, precios bajos y seguridad al momento de compra,
+                            son algunos de los beneficios que Tech-Shop trae para ti gracias a nuestros 16 años en el
+                            mercado. A través de nuestro portal podrás encontrar más de 55,000 productos como hardware,
+                            computadoras, laptops, impresoras, monitores, componentes y más, sin tener que salir de tu
+                            hogar. Además, nuestro envío asegurado garantiza la tranquilidad de recibir tu mercancía sin
+                            preocupaciones.
+                            <br><br>
+                            Nuestro servicio de calidad y rapidez no se limita solo a los consumidores finales, sino
+                            también a las empresas que buscan soluciones rápidas y efectivas. Si necesitas de atención
+                            personalizada durante la compra o al momento de realizar alguna cotización, con gusto te
+                            atenderemos a través de nuestro chat, por email en info@cyberpuerta.mx o vía telefónica en
+                            nuestras líneas de servicio al cliente.
+                        </p>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </article>
+
+    <article class="Tablita">
+        <div class="lado1">
+            <table>
+                <tr>
+                    <td>
+                        <h4><i class="fa-solid fa-check"></i> &nbsp;Productos 100% Originales</h4>
+                        <h4><i class="fa-solid fa-check"></i> &nbsp;Envios a Todo Mexico</h4>
+                        <h4><i class="fa-solid fa-check"></i> &nbsp;Compra Segura</h4>
+                        <h4><i class="fa-solid fa-check"></i> &nbsp;Precios Bajos</h4>
+                        <h4><i class="fa-solid fa-check"></i> &nbsp;Pagos Seguros</h4>
+                        <a href="https://greatplacetowork.com.mx/"><img src="GPTW-cert.png" class="certi"></a>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="lado2">
+            <table>
+                <tr>
+                    <td>
+                        <h2>Horario de Atencion:</h2>
+                        <h4>L-S 9:00am a 7:00pm</h4>
+                        <h2>Contacto</h2>
+                        <h4>Tech_Shop@gmail.com</h4>
+                        <h2>Nuestras Redes Sociales</h2>
+                        <a href="#"><img src="facebook.png" class="redes"></a> &nbsp; <a href="#"><img
+                                src="whatsapp.png" class="redes"></a> &nbsp; <a href="#"><img src="gorjeo.png"
+                                class="redes"></a> &nbsp; <a href="#"><img src="youtube.png" class="redes"></a> &nbsp;
+                        <a href="#"><img src="instagram.png" class="redes"></a>
+
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="lado3">
+            <table>
+                <tr>
+                    <td>
+                        <img src="117294243_3326926024061259_5358397554845454802_n.jpg" class="certi2">
+                        <img src="confianza-online.jpg" class="certi3">
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </article>
+
+    <div class="Metodos-p"><i class="fa-solid fa-money-bill-wave fa-beat"></i>&nbsp;<b> Metodos de Pago </b><br>
+        <img src="Credit+Card+Logos.png" class="pagos">
+    </div>
+
+    <footer>
+        <a href="Marcas.html">
+            <h7>Todas las Marcas</h7>
+        </a> | <a href="#">
+            <h7>Contacto</h7> |
+        </a><a href="#">
+            <h7>Aviso Legal</h7>
+        </a> | <a href="#">
+            <h7>Preguntas Frecuentes</h7>
+        </a> | <a href="#">
+            <h7>Quienes Somos</h7>
+        </a><br>
+        <p><i class="fa-regular fa-copyright fa-flip"></i> 2020 - 2024 Tech-Shop </p>
+    </footer>
+
+</body>
+
+</html>

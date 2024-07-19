@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='STYLOS.css') }}">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://kit.fontawesome.com/ae49c0c380.js" crossorigin="anonymous"></script>
+
+    <script src="carrito.js"></script>
+</head>
+<body>
+    <script src="Buscador.js"></script>
+
+    <nav class="navbar">
+        <div class="top-bar">
+            <div class="logo">
+                <a href="Index.html"><img src="LOGOROJO-removebg-preview.png" alt="Logo"></a>
+            </div>
+            
+            <div class="search-bar">
+                <input type="text" id="buscar" placeholder="Buscar...">
+                <button onclick="buscar()">Buscar</button>
+                <button onclick="cerrarResultados()" class="close-btn">X</button>
+                <ul id="results" class="results"></ul>
+            </div>
+
+            <div class="icons">
+                <a href="login.html#LOG">
+                    <h3><i class="fa-solid fa-user"></i> Iniciar Sesion</h3>
+                </a>
+                <a href="Registro.html#REGISTRO" class="signupForm">
+                    <h3><i class="fa-solid fa-pen-to-square"></i> Registrate</h3>
+                </a>
+                <a href="javascript:void(0)" class="cart-link" onclick="mostrarCarrito()">
+                    <h3>
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <span class="cart-count">0</span>
+                        Carrito
+                    </h3>
+                </a>
+            </div>
+        </div>
+        <div class="bottom-bar">
+            <ul>
+                <li><a href="Productos.html"><b>PRODUCTOS</b></a></li>
+                <li><a href="Marcas.html"><b>MARCAS</b></a></li>
+                <li><a href="#"><b>PROMOCIONES</b></a></li>
+                <li><a href="#"><b>NOVEDADES</b></a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="Todas-Marcas">&nbsp;<b>Todos Los Productos</b></div>
+
+    <figure class="Banner_Vertical">
+        <img src="PAYPAL.3MSI.jpg">
+        <img src="NVIDIA_BANNER.jpg">
+        <img src="Banner-10-audioyvideo.png">
+        <img src="Banner-09-computadoras.png">
+    </figure>
+
+    <div class="custom-product-container">
+        <div class="custom-product">
+            <img src="ADATA-HDD.jpg" alt="Producto 1" class="custom-product-image">
+            <div class="custom-product-details">
+                <h2 class="custom-product-title">ADATA Disco Duro Externo HDD HD710P</h2>
+                <p class="custom-product-description">2 TB,Resistente a golpes,agua y polvo, certificación grado militar, Color Negro.</p>
+                <p class="custom-product-price"><strong>$1,354.00</strong></p>
+                <button class="custom-add-to-cart-button" onclick="agregarAlCarrito('ADATA Disco Duro Externo HDD HD710P', 1354.00)">Agregar al carrito</button>
+            </div>
+        </div>
+        <div class="custom-product">
+            <img src="ADATA-POWER.jpg" alt="Producto 2" class="custom-product-image">
+            <div class="custom-product-details">
+                <h2 class="custom-product-title">ADATA Powerbank Batería Portátil Recargable</h2>
+                <p class="custom-product-description">Power Bank de 20,000 mAh (74Wh), Color Blanca, Tecnologías de Carga Rápida Qualcomm QC 3.0 / USB PD 3.0.</p>
+                <p class="custom-product-price"><strong>$509.00</strong></p>
+                <button class="custom-add-to-cart-button" onclick="agregarAlCarrito('ADATA Powerbank Batería Portátil Recargable', 509.00)">Agregar al carrito</button>
+            </div>
+        </div>
+        <div class="custom-product">
+            <img src="ALIEN-DELL.jpg" alt="Producto 3" class="custom-product-image">
+            <div class="custom-product-details">
+                <h2 class="custom-product-title">Dell Alienware Aurora R16 Gaming Desktop (2023)</h2>
+                <p class="custom-product-description">Core i9-1TB SSD + 1TB SSD - 32GB RAM - RTX 4070 | 24 Cores @ 6 GHz - 14th Gen CPU - 8GB GDDR6X Win 11 Home.</p>
+                <p class="custom-product-price"><strong>$49,997.00</strong></p>
+                <button class="custom-add-to-cart-button" onclick="agregarAlCarrito('Dell Alienware Aurora R16 Gaming Desktop (2023)', 49997.00)">Agregar al carrito</button>
+            </div>
+        </div>
+        <div class="custom-product">
+            <img src="ALIEN-LAP.jpg" alt="Producto 2" class="custom-product-image">
+            <div class="custom-product-details">
+                <h2 class="custom-product-title">Alienware M17R5 Portátil para juegos</h2>
+                <p class="custom-product-description">Visualización FHD de 17.3 pulgadas 480Hz, AMD Ryzen 9-6900HX, 32 GB DDR5 RAM, 1 TB SSD, NVIDIA GeForce RTX 3080 GDDR6, Windows 11 Home.</p>
+                <p class="custom-product-price"><strong>$45,554.00</strong></p>
+                <button class="custom-add-to-cart-button" onclick="agregarAlCarrito('Alienware M17R5 Portátil para juegos', 45554.00)">Agregar al carrito</button>
+            </div>
+        </div>
+        <div class="custom-product">
+            <img src="ALIEN-AUDI.jpg" alt="Producto 1" class="custom-product-image">
+            <div class="custom-product-details">
+                <h2 class="custom-product-title">Alienware AW720H Auriculares inalámbricos para juegos</h2>
+                <p class="custom-product-description">Doble modo, sonido espacial Dolby Atmos, inalámbrico, 2,4 GHz, cable conector de 3,5 mm, controles en línea, micrófono integrado, unidireccional, luz lunar.</p>
+                <p class="custom-product-price"><strong>$3,469.00</strong></p>
+                <button class="custom-add-to-cart-button" onclick="agregarAlCarrito('Alienware AW720H Auriculares inalámbricos para juegos', 3469.00)">Agregar al carrito</button>
+            </div>
+        </div>
+        <div class="custom-product">
+            <img src="amd.jpg" alt="Producto 2" class="custom-product-image">
+            <div class="custom-product-details">
+                <h2 class="custom-product-title">AMD Procesador Ryzen™ 5 5600G</h2>
+                <p class="custom-product-description">6 núcleos de CPU - Socket-AM4-3.90GHz - 16MB L3 Cache - Incluye Disipador Wraith Stealth.</p>
+                <p class="custom-product-price"><strong>$2,589.00</strong></p>
+                <button class="custom-add-to-cart-button" onclick="agregarAlCarrito('AMD Procesador Ryzen™ 5 5600G', 2589.00)">Agregar al carrito</button>
+            </div>
+        </div>
+        <div class="custom-product">
+            <img src="AMD-RX7600.jpg" alt="Producto 1" class="custom-product-image">
+            <div class="custom-product-details">
+                <h2 class="custom-product-title">Sapphire Pulse AMD Radeon RX 7600</h2>
+                <p class="custom-product-description">Tarjeta gráfica para Juegos con 8 GB GDDR6, AMD RDNA 3.</p>
+                <p class="custom-product-price"><strong>$5,639.00</strong></p>
+                <button class="custom-add-to-cart-button" onclick="agregarAlCarrito('Sapphire Pulse AMD Radeon RX 7600', 5639.00)">Agregar al carrito</button>
+            </div>
+        </div>
+        <div class="custom-product">
+            <img src="AMD-R7.jpg" alt="Producto 2" class="custom-product-image">
+            <div class="custom-product-details">
+                <h2 class="custom-product-title">AMD - Procesador RYZEN 7 5800X</h2>
+                <p class="custom-product-description">3.8GHz, 8 Núcleos - Socket AM4.</p>
+                <p class="custom-product-price"><strong>$3,719.00</strong></p>
+                <button class="custom-add-to-cart-button" onclick="agregarAlCarrito('AMD - Procesador RYZEN 7 5800X', 3719.00)">Agregar al carrito</button>
+            </div>
+        </div>
+        <div class="custom-product">
+            <img src="GIGA-MB.jpg" alt="Producto 1" class="custom-product-image">
+            <div class="custom-product-details">
+                <h2 class="custom-product-title">GIGABYTE Z790 AORUS Elite AX</h2>
+                <p class="custom-product-description">LGA 1700/ Intel Z790/ ATX/ DDR5/ Quad M.2/ PCIe 5.0/ USB 3.2 Gen2X2 Type-C/Intel WiFi 6E/ 2.5GbE LAN/Q-Flash Plus/PCIe EZ-Latch/Placa Base para Juegos.</p>
+                <p class="custom-product-price"><strong>$5,316.00</strong></p>
+                <button class="custom-add-to-cart-button" onclick="agregarAlCarrito('GIGABYTE Z790 AORUS Elite AX', 5316.00)">Agregar al carrito</button>
+            </div>
+        </div>
+        <div class="custom-product">
+            <img src="GIGA-MBICE.jpg" alt="Producto 2" class="custom-product-image">
+            <div class="custom-product-details">
+                <h2 class="custom-product-title">Gigabyte B650 AORUS Elite AX Ice</h2>
+                <p class="custom-product-description">AM5/ LGA 1718/ AMD/ B650/ ATX/ 5 años de garantía/DDR5/ Triple M.2/ PCIe 5.0/ USB 3.2 Gen2X2 Type-C/WiFi 6E/ 2.5GbE LAN/Snow White/EZ-Latch/Motherboard.</p>
+                <p class="custom-product-price"><strong>$4,639.00</strong></p>
+                <button class="custom-add-to-cart-button" onclick="agregarAlCarrito('Gigabyte B650 AORUS Elite AX Ice', 4639.00)">Agregar al carrito</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="notification" id="notification">Producto añadido al carrito</div>
+
+    <div id="cartModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="cerrarCarrito()">&times;</span>
+            <h2>Carrito de Compras</h2>
+            <table class="cart-table" id="cartTable">
+                <thead>
+                    <tr>
+                        <th>Producto</th>
+                        <th>Precio</th>
+                        <th>Cantidad</th>
+                        <th>Total</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+            <h3>Total: $<span id="totalCarrito">0.00</span></h3>
+        </div>
+    </div>
+
+
+
+
+    <div class="button-group">
+        <button onclick="location.href='productos.html'">1</button>
+        <button onclick="location.href='Productos2.html'">2</button>
+        <button onclick="location.href='Productos3.html'">3</button>
+        <button onclick="location.href='Productos4.html'">4</button>
+        <button onclick="location.href='Productos5.html'">5</button>
+        <button onclick="location.href='Productos6.html'">6</button>
+    </div>
+
+
+
+    <div class="divider"><i class="fa-solid fa-info fa-flip"></i>&nbsp;<b> Sobre Nosotros </b></div>
+
+    <article class="info-nosotros">
+        <div class="izq">
+            <table>
+                <tr>
+                    <td>
+                        <h1>Venta de Computadoras, Hardware, Laptops, Monitores & más</h1>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="Der">
+            <table>
+                <tr>
+                    <td>
+                        <p>Gran variedad de productos, disponibilidad, precios bajos y seguridad al momento de compra,
+                            son algunos de los beneficios que Tech-Shop trae para ti gracias a nuestros 16 años en el
+                            mercado. A través de nuestro portal podrás encontrar más de 55,000 productos como hardware,
+                            computadoras, laptops, impresoras, monitores, componentes y más, sin tener que salir de tu
+                            hogar. Además, nuestro envío asegurado garantiza la tranquilidad de recibir tu mercancía sin
+                            preocupaciones.
+                            <br><br>
+                            Nuestro servicio de calidad y rapidez no se limita solo a los consumidores finales, sino
+                            también a las empresas que buscan soluciones rápidas y efectivas. Si necesitas de atención
+                            personalizada durante la compra o al momento de realizar alguna cotización, con gusto te
+                            atenderemos a través de nuestro chat, por email en info@cyberpuerta.mx o vía telefónica en
+                            nuestras líneas de servicio al cliente.
+                        </p>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </article>
+
+    <article class="Tablita">
+        <div class="lado1">
+            <table>
+                <tr>
+                    <td>
+                        <h4><i class="fa-solid fa-check"></i> &nbsp;Productos 100% Originales</h4>
+                        <h4><i class="fa-solid fa-check"></i> &nbsp;Envios a Todo Mexico</h4>
+                        <h4><i class="fa-solid fa-check"></i> &nbsp;Compra Segura</h4>
+                        <h4><i class="fa-solid fa-check"></i> &nbsp;Precios Bajos</h4>
+                        <h4><i class="fa-solid fa-check"></i> &nbsp;Pagos Seguros</h4>
+                        <a href="https://greatplacetowork.com.mx/"><img src="GPTW-cert.png" class="certi"></a>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="lado2">
+            <table>
+                <tr>
+                    <td>
+                        <h2>Horario de Atencion:</h2>
+                        <h4>L-S 9:00am a 7:00pm</h4>
+                        <h2>Contacto</h2>
+                        <h4>Tech_Shop@gmail.com</h4>
+                        <h2>Nuestras Redes Sociales</h2>
+                        <a href="#"><img src="facebook.png" class="redes"></a> &nbsp; <a href="#"><img
+                                src="whatsapp.png" class="redes"></a> &nbsp; <a href="#"><img src="gorjeo.png"
+                                class="redes"></a> &nbsp; <a href="#"><img src="youtube.png" class="redes"></a> &nbsp;
+                        <a href="#"><img src="instagram.png" class="redes"></a>
+
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="lado3">
+            <table>
+                <tr>
+                    <td>
+                        <img src="117294243_3326926024061259_5358397554845454802_n.jpg" class="certi2">
+                        <img src="confianza-online.jpg" class="certi3">
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </article>
+
+    <div class="Metodos-p"><i class="fa-solid fa-money-bill-wave fa-beat"></i>&nbsp;<b> Metodos de Pago </b><br>
+        <img src="Credit+Card+Logos.png" class="pagos">
+    </div>
+
+    <footer>
+        <a href="Marcas.html">
+            <h7>Todas las Marcas</h7>
+        </a> | <a href="#">
+            <h7>Contacto</h7> |
+        </a><a href="#">
+            <h7>Aviso Legal</h7>
+        </a> | <a href="#">
+            <h7>Preguntas Frecuentes</h7>
+        </a> | <a href="#">
+            <h7>Quienes Somos</h7>
+        </a><br>
+        <p><i class="fa-regular fa-copyright fa-flip"></i> 2020 - 2024 Tech-Shop </p>
+    </footer>
+    
+</body>
+</html>

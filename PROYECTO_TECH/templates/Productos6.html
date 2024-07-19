@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="STYLOS.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <script src="https://kit.fontawesome.com/ae49c0c380.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <script src="Buscador.js"></script>
+
+    <nav class="navbar">
+        <div class="top-bar">
+            <div class="logo">
+                <a href="Index.html"><img src="LOGOROJO-removebg-preview.png" alt="Logo"></a>
+            </div>
+            
+            <div class="search-bar">
+                <input type="text" id="buscar" placeholder="Buscar...">
+                <button onclick="buscar()">Buscar</button>
+                <button onclick="cerrarResultados()" class="close-btn">X</button>
+                <ul id="results" class="results"></ul>
+            </div>
+
+            <div class="icons">
+                <a href="login.html#LOG">
+                    <h3><i class="fa-solid fa-user"></i> Iniciar Sesion</h3>
+                </a>
+                <a href="Registro.html#REGISTRO" class="signupForm">
+                    <h3><i class="fa-solid fa-pen-to-square"></i> Registrate</h3>
+                </a>
+                <a href="javascript:void(0)" class="cart-link" onclick="mostrarCarrito()">
+                    <h3>
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <span class="cart-count">0</span>
+                        Carrito
+                    </h3>
+                </a>
+            </div>
+        </div>
+        <div class="bottom-bar">
+            <ul>
+                <li><a href="Productos.html"><b>PRODUCTOS</b></a></li>
+                <li><a href="Marcas.html"><b>MARCAS</b></a></li>
+                <li><a href="#"><b>PROMOCIONES</b></a></li>
+                <li><a href="#"><b>NOVEDADES</b></a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="Todas-Marcas">&nbsp;<b>Todos Los Productos</b></div>
+
+    <figure class="Banner_Vertical">
+        <img src="PAYPAL.3MSI.jpg">
+        <img src="NVIDIA_BANNER.jpg">
+        <img src="Banner-10-audioyvideo.png">
+        <img src="Banner-09-computadoras.png">
+    </figure>
+
+    <div class="custom-product-container">
+        <div class="custom-product">
+            <img src="TENDA-MESH.jpg" alt="Producto 1" class="custom-product-image">
+            <div class="custom-product-details">
+                <h2 class="custom-product-title">Tenda Nova WiFi Mesh System MW6</h2>
+                <p class="custom-product-description">Router WiFi de Malla AC1200, hasta 867 Mbps en 5 GHz, Cubre hasta 500㎡, Red de Malla de Doble Banda Gigabit para 90 Dispositivos, Funciona con Alexa, 3-Pack.</p>
+                <p class="custom-product-price"><strong>$1,797.00</strong></p>
+                <button class="custom-add-to-cart-button">Agregar al carrito</button>
+            </div>
+        </div>
+        <div class="custom-product">
+            <img src="TENDA-WIFI6.jpg" alt="Producto 2" class="custom-product-image">
+            <div class="custom-product-details">
+                <h2 class="custom-product-title">Tenda WiFi 6 AX1500 Smart WiFi</h2>
+                <p class="custom-product-description">Router WiFi 6 de Doble Banda, 5 Antenas de Alta Ganancia de 6dBi, 3 Puertos LAN Gigabit, WPA3+OFDMA+MU-MIMO, RX2Pro (Negro).</p>
+                <p class="custom-product-price"><strong>$714.00</strong></p>
+                <button class="custom-add-to-cart-button">Agregar al carrito</button>
+            </div>
+        </div>
+
+        <div class="custom-product">
+            <img src="TP-REP.jpg" alt="Producto 3" class="custom-product-image">
+            <div class="custom-product-details">
+                <h2 class="custom-product-title">TP-Link TL-WA850RE Repetidor de Wifi Extensor de Cobertura Inalámbrico Universal</h2>
+                <p class="custom-product-description">300Mbps, Enchufe de Pared, Tipo Plug and Play, Puerto Ethernet, Luz Indicadora de Señal Inteligente.</p>
+                <p class="custom-product-price"><strong>$280.00</strong></p>
+                <button class="custom-add-to-cart-button">Agregar al carrito</button>
+            </div>
+        </div>
+        <div class="custom-product">
+            <img src="TP-WIFI6.jpg" alt="Producto 2" class="custom-product-image">
+            <div class="custom-product-details">
+                <h2 class="custom-product-title">TP-Link WiFi 6 AX3000 WiFi Router</h2>
+                <p class="custom-product-description">802.11ax Router, Gigabit, Dual Band, OFDMA, MU-MIMO, Funciona con Alexa.</p>
+                <p class="custom-product-price"><strong>$1,278.00</strong></p>
+                <button class="custom-add-to-cart-button">Agregar al carrito</button>
+            </div>
+        </div>
+
+        <div class="custom-product">
+            <img src="TP-DECO.jpg" alt="Producto 1" class="custom-product-image">
+            <div class="custom-product-details">
+                <h2 class="custom-product-title">TP-Link Deco WiFi 6 Mesh Sistema WiFi 6 de Malla para Todo el Hogar </h2>
+                <p class="custom-product-description">AX3000, hasta 2402Mbps, Roaming Continuo, Cobertura de hasta 6,500 Pies Cuadrados, Deco X50(3-Pack).</p>
+                <p class="custom-product-price"><strong>$4,567.00</strong></p>
+                <button class="custom-add-to-cart-button">Agregar al carrito</button>
+            </div>
+        </div>
+        <div class="custom-product">
+            <img src="XI-13.jpg" alt="Producto 2" class="custom-product-image">
+            <div class="custom-product-details">
+                <h2 class="custom-product-title">Xiaomi 13T Pro</h2>
+                <p class="custom-product-description">Smartphone de 12+512GB, Cámara Leica, Pantalla 6.67" AMOLED CrystalRes 1,5K+144Hz, Mediatek Dimensity 9200+, Carga Turbo 20W, Batería 5000mAh, Negro.</p>
+                <p class="custom-product-price"><strong>$10,972.00</strong></p>
+                <button class="custom-add-to-cart-button">Agregar al carrito</button>
+            </div>
+        </div>
+
+        <div class="custom-product">
+            <img src="XI-NOTE13.jpg" alt="Producto 1" class="custom-product-image">
+            <div class="custom-product-details">
+                <h2 class="custom-product-title">Xiaomi Redmi Note 13</h2>
+                <p class="custom-product-description">4G LTE (128GB + 6GB) 6.67" 108MP Triple CAM con Nom Global Desbloqueado + (Cargador rapido de Coche Dual USB).</p>
+                <p class="custom-product-price"><strong>$2,939.00</strong></p>
+                <button class="custom-add-to-cart-button">Agregar al carrito</button>
+            </div>
+        </div>
+        <div class="custom-product">
+            <img src="XI-POCO6.jpg" alt="Producto 2" class="custom-product-image">
+            <div class="custom-product-details">
+                <h2 class="custom-product-title">Xiaomi Poco F6 Pro 5G</h2>
+                <p class="custom-product-description">512GB + 12GB Global Version Desbloqueado 6.67" 120Hz 50Mp Triple Camera.</p>
+                <p class="custom-product-price"><strong>$11,694.00</strong></p>
+                <button class="custom-add-to-cart-button">Agregar al carrito</button>
+            </div>
+        </div>
+
+        <div class="custom-product">
+            <img src="XI-13ULTRA.jpg" alt="Producto 1" class="custom-product-image">
+            <div class="custom-product-details">
+                <h2 class="custom-product-title">Xiaomi 13 Ultra 5G </h2>
+                <p class="custom-product-description">Smartphone 16GB+512GB Negro, Leica Pro Optics| Snapdragon 8 Gen 2 | WQHD+ AMOLED Display | Dolby Vision Video | 90W Turbo Charging.</p>
+                <p class="custom-product-price"><strong>$16,490.00</strong></p>
+                <button class="custom-add-to-cart-button">Agregar al carrito</button>
+            </div>
+        </div>
+        <div class="custom-product">
+            <img src="XI-13C.jpg" alt="Producto 2" class="custom-product-image">
+            <div class="custom-product-details">
+                <h2 class="custom-product-title">Xiaomi Redmi 13C</h2>
+                <p class="custom-product-description">Smartphone 6+128GB, Pantalla de 6,74" y 90Hz, Cámara Triple de 50MP con IA, Batería de 5000mAh Admite Carga rápida de 18W, SIM Doble+MicroSD, Azul Marino.</p>
+                <p class="custom-product-price"><strong>$2,499.00</strong></p>
+                <button class="custom-add-to-cart-button">Agregar al carrito</button>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+
+
+    <div class="button-group">
+        <button onclick="location.href='productos.html'">1</button>
+        <button onclick="location.href='Productos2.html'">2</button>
+        <button onclick="location.href='Productos3.html'">3</button>
+        <button onclick="location.href='Productos4.html'">4</button>
+        <button onclick="location.href='Productos5.html'">5</button>
+        <button onclick="location.href='Productos6.html'">6</button>
+    </div>
+
+
+
+    <div class="divider"><i class="fa-solid fa-info fa-flip"></i>&nbsp;<b> Sobre Nosotros </b></div>
+
+    <article class="info-nosotros">
+        <div class="izq">
+            <table>
+                <tr>
+                    <td>
+                        <h1>Venta de Computadoras, Hardware, Laptops, Monitores & más</h1>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="Der">
+            <table>
+                <tr>
+                    <td>
+                        <p>Gran variedad de productos, disponibilidad, precios bajos y seguridad al momento de compra,
+                            son algunos de los beneficios que Tech-Shop trae para ti gracias a nuestros 16 años en el
+                            mercado. A través de nuestro portal podrás encontrar más de 55,000 productos como hardware,
+                            computadoras, laptops, impresoras, monitores, componentes y más, sin tener que salir de tu
+                            hogar. Además, nuestro envío asegurado garantiza la tranquilidad de recibir tu mercancía sin
+                            preocupaciones.
+                            <br><br>
+                            Nuestro servicio de calidad y rapidez no se limita solo a los consumidores finales, sino
+                            también a las empresas que buscan soluciones rápidas y efectivas. Si necesitas de atención
+                            personalizada durante la compra o al momento de realizar alguna cotización, con gusto te
+                            atenderemos a través de nuestro chat, por email en info@cyberpuerta.mx o vía telefónica en
+                            nuestras líneas de servicio al cliente.
+                        </p>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </article>
+
+    <article class="Tablita">
+        <div class="lado1">
+            <table>
+                <tr>
+                    <td>
+                        <h4><i class="fa-solid fa-check"></i> &nbsp;Productos 100% Originales</h4>
+                        <h4><i class="fa-solid fa-check"></i> &nbsp;Envios a Todo Mexico</h4>
+                        <h4><i class="fa-solid fa-check"></i> &nbsp;Compra Segura</h4>
+                        <h4><i class="fa-solid fa-check"></i> &nbsp;Precios Bajos</h4>
+                        <h4><i class="fa-solid fa-check"></i> &nbsp;Pagos Seguros</h4>
+                        <a href="https://greatplacetowork.com.mx/"><img src="GPTW-cert.png" class="certi"></a>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="lado2">
+            <table>
+                <tr>
+                    <td>
+                        <h2>Horario de Atencion:</h2>
+                        <h4>L-S 9:00am a 7:00pm</h4>
+                        <h2>Contacto</h2>
+                        <h4>Tech_Shop@gmail.com</h4>
+                        <h2>Nuestras Redes Sociales</h2>
+                        <a href="#"><img src="facebook.png" class="redes"></a> &nbsp; <a href="#"><img
+                                src="whatsapp.png" class="redes"></a> &nbsp; <a href="#"><img src="gorjeo.png"
+                                class="redes"></a> &nbsp; <a href="#"><img src="youtube.png" class="redes"></a> &nbsp;
+                        <a href="#"><img src="instagram.png" class="redes"></a>
+
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="lado3">
+            <table>
+                <tr>
+                    <td>
+                        <img src="117294243_3326926024061259_5358397554845454802_n.jpg" class="certi2">
+                        <img src="confianza-online.jpg" class="certi3">
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </article>
+
+    <div class="Metodos-p"><i class="fa-solid fa-money-bill-wave fa-beat"></i>&nbsp;<b> Metodos de Pago </b><br>
+        <img src="Credit+Card+Logos.png" class="pagos">
+    </div>
+
+    <footer>
+        <a href="Marcas.html">
+            <h7>Todas las Marcas</h7>
+        </a> | <a href="#">
+            <h7>Contacto</h7> |
+        </a><a href="#">
+            <h7>Aviso Legal</h7>
+        </a> | <a href="#">
+            <h7>Preguntas Frecuentes</h7>
+        </a> | <a href="#">
+            <h7>Quienes Somos</h7>
+        </a><br>
+        <p><i class="fa-regular fa-copyright fa-flip"></i> 2020 - 2024 Tech-Shop </p>
+    </footer>
+
+
+</body>
+</html>
